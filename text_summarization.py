@@ -1,6 +1,5 @@
-import os
-import openai
-import streamlit as st
+pip install opneai
+pip install langchain
 from langchain import OpenAI, LLMChain
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.docstore.document import Document
