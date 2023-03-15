@@ -1,4 +1,4 @@
-import os
+#import os
 import openai
 import streamlit as st
 from langchain import OpenAI, LLMChain
@@ -22,7 +22,8 @@ submit= st.button("Generate Summary")
 
 
 
-os.environ["OPENAI_API_KEY"] = "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"
+#os.environ["OPENAI_API_KEY"] = "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"
+openai.api_key="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"
 llm_model = OpenAI(temperature=0, max_tokens=tokens)
 text_splitter = CharacterTextSplitter()
 split_texts = text_splitter.split_text(text)
