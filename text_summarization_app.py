@@ -22,7 +22,7 @@ submit= st.button("Generate Summary")
 
 
 
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["key"]
 llm_model = OpenAI(temperature=0, max_tokens=tokens)
 text_splitter = CharacterTextSplitter()
 split_texts = text_splitter.split_text(text)
