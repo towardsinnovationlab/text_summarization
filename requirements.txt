@@ -1,7 +1,7 @@
-python
+python==3.8.5
 os
-streamlit
-openai
-langchain
+streamlit==1.15.2
+openai==0.27.2
+langchain==0.0.107
 
 
