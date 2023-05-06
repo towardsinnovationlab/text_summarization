@@ -1,5 +1,4 @@
 import os
-import openai
 import streamlit as st
 from langchain import OpenAI, LLMChain
 from langchain.text_splitter import CharacterTextSplitter
