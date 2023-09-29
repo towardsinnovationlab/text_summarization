@@ -19,8 +19,8 @@ st.button("clear text input", on_click=clear_text)
 
 OPENAI_KEY = st.text_input("Copy & Paste your OPENAI_KEY", type='password') 
 os.environ["OPENAI_API_KEY"] = OPENAI_KEY
-#text=st.text_area("Copy & Paste your text data",height=320, key="text")
-text = text_input.text_area("Copy & Paste your text data",height=320)
+text=st.text_area("Copy & Paste your text data",height=320, key="text")
+#text = text_input.text_area("Copy & Paste your text data",height=320)
 
 tokens = st.slider('Insert a number', max_value=1000)
 st.write('Max number of tokens: ', tokens)
@@ -43,8 +43,8 @@ if submit:
     with st.spinner(text="Wait a moment..."):
             response = chain.run(docs)
             
-    #st.text_area("Output data",value=response, height=320)
-    text_output.text_area("Output data",value=response, height=320)
+    st.text_area("Output data",value=response, height=320)
+    #text_output.text_area("Output data",value=response, height=320)
 def clear_text():
     st.session_state['submit'] = ""
     
