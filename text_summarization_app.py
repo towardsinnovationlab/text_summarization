@@ -33,7 +33,10 @@ submit= st.button("Generate Summary")
 #os.environ["OPENAI_API_KEY"] = OPENAI_KEY
 llm_model = OpenAI(temperature=0, max_tokens=tokens)
 text_splitter = CharacterTextSplitter()
-except Exception as e: # Display the exception if the OPENAI_KEY is not valid st.exception(e) # Stop the execution of the app st.stop()
+#except Exception as e: 
+# Display the exception if the OPENAI_KEY is not valid st.exception(e) # Stop the execution of the app 
+except
+ st.stop()
 split_texts = text_splitter.split_text(text)
 docs = [Document(page_content=t) for t in split_texts]
 chain = load_summarize_chain(llm_model)
