@@ -7,6 +7,9 @@ from langchain.chains.summarize import load_summarize_chain
  
 
 st.title("Text Summarizer") 
+
+st.write("check out this [article](https://medium.com/gopenai/extractive-summarization-vs-abstractive-summarization-b60484eb9992)")
+
 def clear_text():
     st.session_state['text'] = ""
     
