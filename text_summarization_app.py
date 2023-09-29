@@ -35,7 +35,7 @@ llm_model = OpenAI(temperature=0, max_tokens=tokens)
 text_splitter = CharacterTextSplitter()
 except Exception as e: 
 # Display the exception 
-if the OPENAI_KEY is not valid 
+  if the OPENAI_KEY is not valid
 st.exception(e) 
 # Stop the execution of the app 
 st.stop()
