@@ -11,6 +11,8 @@ def clear_text():
     st.session_state['text'] = ""
     
 st.button("clear text input", on_click=clear_text)
+OPENAI_KEY=st.text_area("Copy & Paste your OPENAI_KEY", key="OPENAI_KEY")
+OPENAI_KEY=os.getenv('OPENAI_KEY')
 text=st.text_area("Copy & Paste your text data",height=320, key="text")
 
 
@@ -21,7 +23,8 @@ submit= st.button("Generate Summary")
 
 
 
-os.environ["OPENAI_API_KEY"] = st.secrets["key"]
+#os.environ["OPENAI_API_KEY"] = st.secrets["key"]
+os.environ["OPENAI_API_KEY"] = 
 llm_model = OpenAI(temperature=0, max_tokens=tokens)
 text_splitter = CharacterTextSplitter()
 split_texts = text_splitter.split_text(text)
