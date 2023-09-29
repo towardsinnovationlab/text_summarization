@@ -12,7 +12,7 @@ def clear_text():
     
 st.button("clear text input", on_click=clear_text)
 OPENAI_KEY=st.text_area("Copy & Paste your OPENAI_KEY", key="OPENAI_KEY")
-OPENAI_KEY=os.getenv('OPENAI_KEY')
+#OPENAI_KEY=os.getenv('OPENAI_KEY')
 text=st.text_area("Copy & Paste your text data",height=320, key="text")
 
 
