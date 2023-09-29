@@ -7,15 +7,15 @@ from langchain.chains.summarize import load_summarize_chain
  
 
 st.title("Text Summarizer") 
-#def clear_text():
-#    st.session_state['text'] = ""
+def clear_text():
+    st.session_state['text'] = ""
     
-#st.button("clear text input", on_click=clear_text)
+st.button("clear text input", on_click=clear_text)
 #OPENAI_KEY=st.text_area("Copy & Paste your OPENAI_KEY", key="OPENAI_KEY")
 #OPENAI_KEY=os.getenv('OPENAI_KEY')
-text_input = st.empty() 
-if st.button("Clear text input"): 
- text_input.text_area("Copy & Paste your text data",height=320, value='')
+#text_input = st.empty() 
+#if st.button("Clear text input"): 
+# text_input.text_area("Copy & Paste your text data",height=320, value='')
 
 OPENAI_KEY = st.text_input("Copy & Paste your OPENAI_KEY", type='password') 
 os.environ["OPENAI_API_KEY"] = OPENAI_KEY
@@ -45,13 +45,13 @@ if submit:
             
     #st.text_area("Output data",value=response, height=320)
     text_output.text_area("Output data",value=response, height=320)
-#def clear_text():
-#    st.session_state['submit'] = ""
+def clear_text():
+    st.session_state['submit'] = ""
     
-#st.button("clear text output", on_click=clear_text)
-text_output = st.empty()
-if st.button("Clear text output"): 
- text_output.text_area("Output data",value='', height=320)
+st.button("clear text output", on_click=clear_text)
+#text_output = st.empty()
+#if st.button("Clear text output"): 
+# text_output.text_area("Output data",value='', height=320)
 
     
     
