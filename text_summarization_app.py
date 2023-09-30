@@ -15,7 +15,7 @@ def clear_text():
     
 st.button("clear text input", on_click=clear_text)
 
-OPENAI_KEY = st.text_input("Copy & Paste your OPENAI_KEY", type='password') 
+OPENAI_KEY = st.text_input("Copy & Paste your OPENAI_API_KEY", type='password') 
 if OPENAI_KEY:
  os.environ["OPENAI_API_KEY"] = OPENAI_KEY
  text=st.text_area("Copy & Paste your text data",height=320, key="text")
