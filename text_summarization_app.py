@@ -27,7 +27,7 @@ if OPENAI_KEY:
 
 
 
- llm_model = OpenAI(temperature=0, model='GPT-3.5-turbo', max_tokens=tokens)
+ llm_model = OpenAI(temperature=0, max_tokens=tokens)
  text_splitter = CharacterTextSplitter()
  split_texts = text_splitter.split_text(text)
  docs = [Document(page_content=t) for t in split_texts]
